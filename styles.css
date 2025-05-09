@@ -76,7 +76,7 @@ button:hover {
     display: inline-block; /* Permite aplicar padding, márgenes y que se comporte como un bloque en línea */
     background-color: #28a745; /* Un color de fondo verde vibrante, asociado a menudo con resultados positivos */
     color: #ffffff;           /* Color de texto blanco para un buen contraste con el fondo verde */
-    padding: 8px 15px;       /* Espaciado interno: 8px arriba/abajo, 15px izquierda/derecha */
+    padding: 15px 15px;       /* Espaciado interno: 8px arriba/abajo, 15px izquierda/derecha */
     margin-left: 5px;        /* Un pequeño margen a la izquierda para separarlo del signo "$" o texto previo */
     border-radius: 8px;      /* Esquinas redondeadas */
     font-weight: bold;       /* Hace el texto del precio más grueso */
