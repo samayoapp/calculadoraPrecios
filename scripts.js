@@ -1,5 +1,3 @@
-alert("Cambio 018");
-
 function calcularPrecio() {
     // Ocultar resultados y errores previos
     document.getElementById('resultadoDiv').style.display = 'none';
@@ -8,7 +6,7 @@ function calcularPrecio() {
 
     // Obtener los valores de los inputs
     const costoServicio = parseFloat(document.getElementById('costoServicio').value);
-    const porcentajeComision = parseFloat(document.getElementById('porcentajeComision').value);
+    const porcentajeComision = parseFloat(document.querySelector('input[name="comision"]:checked').value);
     const costosIndirectos = parseFloat(document.getElementById('costosIndirectos').value);
     const margenBrutoDeseado = parseFloat(document.getElementById('margenBrutoDeseado').value); // Input clave cambiado
 

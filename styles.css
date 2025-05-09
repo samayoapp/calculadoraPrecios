@@ -29,13 +29,14 @@ label {
     margin-top: 10px;
     font-weight: bold;
 }
-input[type="number"] {
+input[type="number"], select {
     width: calc(100% - 22px);
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #fff; /* Matches the input fields' background */
 }
 button {
     background-color: #007bff;
@@ -85,4 +86,21 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Una sombra suave para darle profundidad */
     text-align: center;      /* Centra el texto si el span se hiciera más ancho */
     min-width: 80px;         /* Un ancho mínimo para que el recuadro tenga buena presencia */
+}
+
+#porcentajeComision {
+    width: calc(100% - 22px); /* Alinea el ancho con los otros inputs */
+    padding: 10px; /* Mantiene el padding existente */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+#porcentajeComision label {
+    display: inline-block; /* Aligns the radio buttons horizontally */
+    margin-right: 15px; /* Adds spacing between the options */
+    font-weight: normal;
+}
+#porcentajeComision input[type="radio"] {
+    margin-right: 10px;
 }
