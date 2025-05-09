@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: auto;
+}
+#appLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px; /* Ajusta el tamaño según necesites */
+    height: auto;
+    margin-bottom: 10px; /* Espacio debajo del logo */  
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.resultado p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+.resultado p span {
+    font-weight: bold;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo para resaltar el Precio de Venta Calculado */
+#precioVentaCalculado {
+    display: inline-block; /* Permite aplicar padding, márgenes y que se comporte como un bloque en línea */
+    background-color: #28a745; /* Un color de fondo verde vibrante, asociado a menudo con resultados positivos */
+    color: #ffffff;           /* Color de texto blanco para un buen contraste con el fondo verde */
+    padding: 8px 15px;       /* Espaciado interno: 8px arriba/abajo, 15px izquierda/derecha */
+    margin-left: 5px;        /* Un pequeño margen a la izquierda para separarlo del signo "$" o texto previo */
+    border-radius: 8px;      /* Esquinas redondeadas */
+    font-weight: bold;       /* Hace el texto del precio más grueso */
+    font-size: 1.15em;       /* Aumenta ligeramente el tamaño de la fuente para destacar */
+    border: 1px solid #1e7e34; /* Un borde sutil un poco más oscuro que el fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Una sombra suave para darle profundidad */
+    text-align: center;      /* Centra el texto si el span se hiciera más ancho */
+    min-width: 80px;         /* Un ancho mínimo para que el recuadro tenga buena presencia */
+}

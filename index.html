@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Costos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="images/Logo_Publimatec_horizontal.png" alt="Logo de la App" id="appLogo">
+    <h1>Calculadora de Precios</h1>
+
+    <div>
+        <label for="costoServicio">Costo del Servicio (L):</label>
+        <input type="number" id="costoServicio" placeholder="Ej: 5000">
+    </div>
+
+    <div>   
+        <label for="porcentajeComision">Porcentaje de Comisión (%):</label>
+        <input type="number" id="porcentajeComision" placeholder="Ej: 10">
+    </div>
+
+    <div>
+        <label for="costosIndirectos">Costos Indirectos (L):</label>
+        <input type="number" id="costosIndirectos" placeholder="Ej: 20">
+    </div>
+
+    <div>
+        <label for="margenBrutoDeseado">Margen Bruto Deseado (%):</label>
+        <input type="number" id="margenBrutoDeseado" placeholder="Ej: 40">
+    </div>
+
+    <button onclick="calcularPrecio()">Calcular Precio</button>
+
+    <div id="resultadoDiv" class="resultado" style="display:none;">
+        <h2>Resultados del Cálculo:</h2>
+        <p>Costo del servicio: L<span id="cogsCalculado"></span></p>
+        <p>Precio de Venta Sugerido: L<span id="precioVentaCalculado"></span></p>
+        <p>Ganancia Bruta por unidad: L<span id="gananciaBrutaCalculada"></span></p>
+        <p><strong>Markup sobre Costo necesario: <span id="markupSobreCostoCalculado"></span>%</strong></p>
+        <p style="font-size:0.9em; color:#555;"><em>(Margen Bruto Obtenido Real: <span id="margenBrutoObtenido"></span>%)</em></p>
+    </div>
+    <div id="errorDiv" class="error" style="display:none;"></div>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
