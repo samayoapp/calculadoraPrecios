@@ -1,3 +1,5 @@
+alert("Hola, estas en modo exporación.");
+
 function calcularPrecio() {
     // Ocultar resultados y errores previos
     document.getElementById('resultadoDiv').style.display = 'none';
@@ -116,5 +118,35 @@ function calcularPrecio() {
         }
     }
     
+    // Obtener el porcentaje de impuesto seleccionado
+    const impuestoRadios = document.getElementsByName('impuesto');
+    let porcentajeImpuesto = 0;
+    for (const radio of impuestoRadios) {
+        if (radio.checked) {
+            porcentajeImpuesto = parseFloat(radio.value);
+            break;
+        }
+    }
+
+    // Calcular el precio con impuesto
+    const precioMasImpuesto = precioVenta * (1 + porcentajeImpuesto / 100);
+
+    // Mostrar el precio con impuesto en el resultado
+    document.getElementById('precioSugeridoConImpuesto').textContent = precioMasImpuesto.toFixed(2);
+
+    // Calcular el impuesto aplicado
+    const impuestoAplicado = precioVenta * (porcentajeImpuesto / 100);
+
+    // Mostrar el impuesto aplicado en el resultado
+    const impuestoAplicadoElem = document.getElementById('impuestoAplicado');
+    if (impuestoAplicadoElem) {
+        impuestoAplicadoElem.textContent = impuestoAplicado.toFixed(2);
+    }
+
     document.getElementById('resultadoDiv').style.display = 'block';
+}
+
+// Formatear números con separador de miles
+function formatNumberWithCommas(number) {
+    return number.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }

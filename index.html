@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Costos</title>
+    <title>Calculadora de Costos Xplore</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
     <img src="images/Logo_Publimatec_horizontal.png" alt="Logo de la App" id="appLogo">
-    <h1>Calculadora de Precios</h1>
+    <h1>Calculadora de Precios X</h1>
 
     <div>
         <label for="costoServicio">Costo del Servicio (L):</label>
@@ -58,15 +58,53 @@
         </select>
     </div>
 
+    <div>
+        <label for="impuestoVentas">Impuesto sobre Ventas (%):</label>
+        <div id="impuestoVentas">
+            <label><input type="radio" name="impuesto" value="12"> 12%</label>
+            <label><input type="radio" name="impuesto" value="15"> 15%</label>
+            <label><input type="radio" name="impuesto" value="18"> 18%</label>
+        </div>
+    </div>
+
     <button onclick="calcularPrecio()">Calcular Precio</button>
 
     <div id="resultadoDiv" class="resultado" style="display:none;">
         <h2>Resultados del Cálculo:</h2>
-        <p>Costo del servicio: L<span id="cogsCalculado"></span></p>
-        <p>Precio de Venta Sugerido: L<span id="precioVentaCalculado"></span></p>
-        <p>Ganancia Bruta por unidad: L<span id="gananciaBrutaCalculada"></span></p>
-        <p><strong>Markup sobre Costo necesario: <span id="markupSobreCostoCalculado"></span>%</strong></p>
-        <p style="font-size:0.9em; color:#555;"><em>(Margen Bruto Obtenido Real: <span id="margenBrutoObtenido"></span>%)</em></p>
+        <table>
+            <tr>
+                <th>Descripción</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Costo del servicio:</td>
+                <td>L<span id="cogsCalculado"></span></td>
+            </tr>
+            <tr>
+                <td>Precio de Venta Sugerido:</td>
+                <td id="precioVentaCalc">L<span id="precioVentaCalculado"></span></td>
+            </tr>
+            <tr>
+                <td>Ganancia Bruta por unidad:</td>
+                <td>L<span id="gananciaBrutaCalculada"></span></td>
+            </tr>
+            <tr>
+                <td>Markup sobre Costo necesario:</td>
+                <td><span id="markupSobreCostoCalculado"></span>%</td>
+            </tr>
+            <tr>
+                <td>Margen Bruto Obtenido Real:</td>
+                <td><span id="margenBrutoObtenido"></span>%</td>
+            </tr>
+            <tr>
+                <td>Impuesto Aplicado:</td>
+                <td>L<span id="impuestoAplicado"></span></td>
+            </tr>
+            <tr>
+                <td>Precio Sugerido con Impuesto:</td>
+                <td>L<span id="precioSugeridoConImpuesto"></span></td>
+            </tr>
+        </table>
     </div>
     <div id="errorDiv" class="error" style="display:none;"></div>
 

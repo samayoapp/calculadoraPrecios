@@ -72,20 +72,9 @@ button:hover {
     text-align: center;
 }
 
-/* Estilo para resaltar el Precio de Venta Calculado */
+/* Eliminé los estilos específicos del DIV precioVentaCalculado para que quede uniforme con el resto de la tabla */
 #precioVentaCalculado {
-    display: inline-block; /* Permite aplicar padding, márgenes y que se comporte como un bloque en línea */
-    background-color: #28a745; /* Un color de fondo verde vibrante, asociado a menudo con resultados positivos */
-    color: #ffffff;           /* Color de texto blanco para un buen contraste con el fondo verde */
-    padding: 15px 15px;       /* Espaciado interno: 8px arriba/abajo, 15px izquierda/derecha */
-    margin-left: 5px;        /* Un pequeño margen a la izquierda para separarlo del signo "$" o texto previo */
-    border-radius: 8px;      /* Esquinas redondeadas */
-    font-weight: bold;       /* Hace el texto del precio más grueso */
-    font-size: 1.15em;       /* Aumenta ligeramente el tamaño de la fuente para destacar */
-    border: 1px solid #1e7e34; /* Un borde sutil un poco más oscuro que el fondo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Una sombra suave para darle profundidad */
-    text-align: center;      /* Centra el texto si el span se hiciera más ancho */
-    min-width: 80px;         /* Un ancho mínimo para que el recuadro tenga buena presencia */
+    all: unset; /* Resetea todos los estilos aplicados */
 }
 
 #porcentajeComision {
@@ -103,4 +92,35 @@ button:hover {
 }
 #porcentajeComision input[type="radio"] {
     margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Bordes suaves */
+    padding: 8px;
+    text-align: left; /* Alineación por defecto */
+}
+
+td:nth-child(2) {
+    text-align: right; /* Alinear los montos a la derecha */
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#resultadoDiv td span {
+    margin-left: 5px; /* Ajusta el espacio según sea necesario */
+}
+
+/* Agregar color verde suave a la celda que contiene el valor de "precio de venta sugerido" */
+#resultadoDiv td#precioVentaCalc{
+    background-color: #d4edda; /* Verde suave */
+    font-weight: bold; /* Negrita para destacar el valor */
 }
