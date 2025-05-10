@@ -30,7 +30,7 @@ label {
     font-weight: bold;
 }
 input[type="number"], select {
-    width: calc(100% - 22px);
+    width: 100%; /* Ajusta el ancho para que coincida con el botón */
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
@@ -43,7 +43,7 @@ button {
     color: white;
     padding: 10px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px; /* Ajusta el borde para que sea completamente circular en los extremos */
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
@@ -89,8 +89,8 @@ button:hover {
 }
 
 #porcentajeComision {
-    width: calc(100% - 22px); /* Alinea el ancho con los otros inputs */
-    padding: 10px; /* Mantiene el padding existente */
+    width: 100%; /* Ajusta el ancho para que coincida con los otros inputs y el botón */
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f9f9f9;
